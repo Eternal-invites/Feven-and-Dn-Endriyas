@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="የጋብቻ ግብዣ — ዲ/ን እንድሪያስ መንግስቴ & ፌቨን ተሻዬ — መስከረም 24 ፣ 2019 ዓ.ም" />
+  <title>ዲ/ን እንድሪያስ &amp; ፌቨን | የጋብቻ ግብዣ</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Serif+Ethiopic:wght@400;500;600;700&family=Abyssinica+SIL&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════ 1. OPENING WEDDING COVER ═══════════════ -->
+  <div id="cover" class="cover" role="dialog" aria-label="የጋብቻ ግብዣ ማስታወቂያ">
+    <div class="cover-bg" aria-hidden="true"></div>
+    <div class="cover-overlay" aria-hidden="true"></div>
+    <div class="cover-vignette" aria-hidden="true"></div>
+    <canvas id="coverParticles" class="cover-particles" aria-hidden="true"></canvas>
+
+    <div class="cover-frame" aria-hidden="true">
+      <span class="frame-corner corner-tl"></span>
+      <span class="frame-corner corner-tr"></span>
+      <span class="frame-corner corner-bl"></span>
+      <span class="frame-corner corner-br"></span>
+    </div>
+
+    <div class="cover-content">
+      <div class="cover-ornament anim-item" data-anim="1" aria-hidden="true">
+        <svg viewBox="0 0 120 24" class="ornament-svg">
+          <path d="M2 12 H44 M76 12 H118" stroke="currentColor" stroke-width="1" fill="none"/>
+          <path d="M60 3 L66 12 L60 21 L54 12 Z" stroke="currentColor" stroke-width="1.2" fill="none"/>
+          <circle cx="60" cy="12" r="2" fill="currentColor"/>
+          <path d="M48 12 l4 -4 M48 12 l4 4 M72 12 l-4 -4 M72 12 l-4 4" stroke="currentColor" stroke-width="1" fill="none"/>
+        </svg>
+      </div>
+
+      <p class="cover-kicker anim-item" data-anim="2">ከብካብ</p>
+
+      <h1 class="cover-names">
+        <span class="cover-name anim-item" data-anim="3">ዲ/ን እንድሪያስ መንግስቴ </span>
+        <span class="cover-amp anim-item" data-anim="4" aria-hidden="true">&amp;</span>
+        <span class="cover-name anim-item" data-anim="5">ወ/ሪት ፌቨን ጸሀዬ</span>
+      </h1>
+
+      <div class="cover-details">
+        <p class="cover-date anim-item" data-anim="6">መስከረም 24 ፣ 2019 ዓ.ም</p>
+        <p class="cover-meta anim-item" data-anim="7">
+          <span class="cover-time">11:30 LT</span>
+          <span class="cover-venue">ኢስት ዌስት አዳራሽ — ጎፋ መብራት</span>
+        </p>
+      </div>
+
+      <div class="cover-divider anim-item" data-anim="8" aria-hidden="true">
+        <span class="divider-line"></span>
+        <svg viewBox="0 0 24 24" class="divider-cross">
+          <path d="M12 3 v18 M6 9 h12" stroke="currentColor" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+          <circle cx="12" cy="9" r="1.4" fill="currentColor"/>
+        </svg>
+        <span class="divider-line"></span>
+      </div>
+
+      <button id="enterBtn" class="enter-btn anim-item" data-anim="9" type="button">
+        ግብዣውን ይመልከቱ
+      </button>
+    </div>
+  </div>
+
+  <!-- ═══════════════ NAVIGATION ═══════════════ -->
+  <header id="siteNav" class="site-nav" aria-hidden="true">
+    <nav class="nav-inner" aria-label="ዋና አሰሳ">
+      <a href="#home" class="nav-brand">E <span aria-hidden="true">&amp;</span> F</a>
+
+      <button id="navToggle" class="nav-toggle" type="button" aria-expanded="false" aria-controls="navMenu" aria-label="ምናሌ ክፈት">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul id="navMenu" class="nav-menu">
+        <li><a href="#home" class="nav-link" data-section="home">መነሻ</a></li>
+        <li><a href="#date" class="nav-link" data-section="date">ቀን</a></li>
+        <li><a href="#program" class="nav-link" data-section="program">ዝግጅት</a></li>
+        <li><a href="#mezmur" class="nav-link" data-section="mezmur">መዝሙር</a></li>
+        <li><a href="#wishes" class="nav-link" data-section="wishes">ምኞት</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="mainContent" class="main-content">
+
+    <!-- ═══════════════ 2. HERO ═══════════════ -->
+    <section id="home" class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <p class="hero-kicker reveal">የድስታችን ተካፋይ ይሆኑ ዘንድ ጠርተንዎታል! </p>
+        <h2 class="hero-names">
+          <span class="reveal">ዲ/ን እንድሪያስ</span>
+          <span class="hero-amp reveal" aria-hidden="true">&amp;</span>
+          <span class="reveal">ወ/ሪት ፌቨን</span>
+        </h2>
+        <p class="hero-quote reveal">"ይህ ምስጢር ታላቅ ነው" — ኤፌ 5፡32</p>
+        <a href="#photos" class="scroll-indicator reveal" aria-label="ወደ ቀጣይ ክፍል ውረድ">
+          <span class="scroll-arrow" aria-hidden="true">↓</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ═══════════════ INVITATION MESSAGE ═══════════════ -->
+    <section id="invitation" class="invitation-section">
+      <div class="invitation-card reveal">
+        <div class="inv-ornament" aria-hidden="true">
+          <svg viewBox="0 0 120 24" class="ornament-svg">
+            <path d="M2 12 H44 M76 12 H118" stroke="currentColor" stroke-width="1" fill="none"/>
+            <path d="M60 3 L66 12 L60 21 L54 12 Z" stroke="currentColor" stroke-width="1.2" fill="none"/>
+            <circle cx="60" cy="12" r="2" fill="currentColor"/>
+          </svg>
+        </div>
+
+        <p class="inv-salutation">የተከበራችሁ ወዳጆቻችን</p>
+
+        <h2 class="inv-names">
+          ዲ/ን እንድርያስ መንግስቴ
+          <span class="inv-amp">እና</span>
+          ወ/ሪት ፌቨን ጸሀዬ
+        </h2>
+
+        <p class="inv-message">
+          የሠርግ ሥነ ሥርዓት እንደ እግዚአብሔር መልካም ፈቃድ አሑድ መስከረም 24/2019 ዓ.ም
+          የሚፈጸም በመሆኑ፤ እርስዎም በዚህ ዕለት ከምሽቱ 11፡00 ሰዓት በኢስት ዌስት አዳራሽ
+          ባዘጋጀነው የእራት መርሐግብር ላይ ተገኝተው የደስታችን ተካፋይ እንዲሆኑ
+          በአክብሮት ጠርተናችኋል።
+        </p>
+
+        <div class="inv-divider" aria-hidden="true">
+          <span class="divider-line"></span>
+          <svg viewBox="0 0 24 24" class="divider-cross">
+            <path d="M12 3 v18 M6 9 h12" stroke="currentColor" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+          </svg>
+          <span class="divider-line"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ 3. COUPLE PHOTOS ═══════════════ -->
+    <section id="photos" class="photos-section">
+      <div class="section-head reveal">
+        <svg viewBox="0 0 120 24" class="ornament-svg" aria-hidden="true">
+          <path d="M2 12 H44 M76 12 H118" stroke="currentColor" stroke-width="1" fill="none"/>
+          <path d="M60 3 L66 12 L60 21 L54 12 Z" stroke="currentColor" stroke-width="1.2" fill="none"/>
+          <circle cx="60" cy="12" r="2" fill="currentColor"/>
+        </svg>
+
+      </div>
+
+      <div class="photos-grid">
+        <figure class="photo-card photo-tall reveal-left">
+          <img src="assets/images/couple2.jpg" alt="ዲ/ን እንድሪያስ እና ወ/ሪት ፌቨን — የሙሽራ ፎቶ አንድ" loading="lazy" />
+          <span class="photo-frame" aria-hidden="true"></span>
+        </figure>
+        <!-- <figure class="photo-card photo-offset reveal-right">
+          <img src="assets/images/couple1.jpg" alt="ዲ/ን እንድሪያስ እና ወ/ሪት ፌቨን — የሙሽራ ፎቶ ሁለት" loading="lazy" />
+          <span class="photo-frame" aria-hidden="true"></span>
+        </figure> -->
+      </div>
+    </section>
+
+    <!-- ═══════════════ 4. ETHIOPIAN CALENDAR DATE CARD ═══════════════ -->
+    <section id="date" class="date-section">
+      <div class="section-head reveal">
+        <h2 class="section-title">የሰርጉ ቀን</h2>
+      </div>
+
+      <div class="calendar-card reveal-scale">
+        <div class="cal-arch" aria-hidden="true"></div>
+        <div class="cal-month">
+          <span class="cal-line" aria-hidden="true"></span>
+          <span>መስከረም</span>
+          <span class="cal-line" aria-hidden="true"></span>
+        </div>
+        <div class="cal-day">24</div>
+        <div class="cal-year">2019 ዓ.ም</div>
+        <div class="cal-divider" aria-hidden="true">
+          <svg viewBox="0 0 24 24" class="divider-cross">
+            <path d="M12 3 v18 M6 9 h12" stroke="currentColor" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="cal-meta">
+          <p class="cal-time">
+            <svg viewBox="0 0 24 24" class="inline-icon" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M12 7 v5 l3.5 2" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            11:30 LT
+          </p>
+          <p class="cal-venue">
+            <svg viewBox="0 0 24 24" class="inline-icon" aria-hidden="true"><path d="M12 21 c-4.5 -4.6 -7 -7.6 -7 -11 a7 7 0 0 1 14 0 c0 3.4 -2.5 6.4 -7 11 z" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="10" r="2.4" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>
+            ኢስት ዌስት አዳራሽ — ጎፋ መብራት
+          </p>
+        </div>
+      </div>
+
+      <div id="countdownWrap" class="countdown-wrap reveal">
+        <p class="countdown-title">እስከ ሰርጉ ቀን</p>
+        <div id="countdown" class="countdown">
+          <div class="cd-tile"><span class="cd-num" id="cdDays">--</span><span class="cd-label">ቀናት</span></div>
+          <div class="cd-tile"><span class="cd-num" id="cdHours">--</span><span class="cd-label">ሰዓታት</span></div>
+          <div class="cd-tile"><span class="cd-num" id="cdMinutes">--</span><span class="cd-label">ደቂቃዎች</span></div>
+          <div class="cd-tile"><span class="cd-num" id="cdSeconds">--</span><span class="cd-label">ሰከንዶች</span></div>
+        </div>
+        <p id="countdownDone" class="countdown-done" hidden>የሰርጉ ቀን ደርሷል — እንኳን ደስ አለን!</p>
+      </div>
+    </section>
+
+    <!-- ═══════════════ 5. LOCATION ═══════════════ -->
+    <section id="location" class="location-section">
+      <div class="location-card reveal">
+        <div class="location-pin" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 21 c-4.5 -4.6 -7 -7.6 -7 -11 a7 7 0 0 1 14 0 c0 3.4 -2.5 6.4 -7 11 z" fill="none" stroke="currentColor" stroke-width="1.3"/><circle cx="12" cy="10" r="2.4" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>
+        </div>
+        <h2 class="location-title">ኢስት ዌስት አዳራሽ</h2>
+        <p class="location-sub">ጎፋ መብራት</p>
+        <a id="mapLink" class="map-btn" href="#" target="_blank" rel="noopener noreferrer">ካርታውን ይመልከቱ</a>
+      </div>
+    </section>
+
+    <!-- ═══════════════ 6. EVENT TIMELINE ═══════════════ -->
+    <section id="program" class="program-section">
+      <div class="section-head reveal">
+        <svg viewBox="0 0 120 24" class="ornament-svg" aria-hidden="true">
+          <path d="M2 12 H44 M76 12 H118" stroke="currentColor" stroke-width="1" fill="none"/>
+          <path d="M60 3 L66 12 L60 21 L54 12 Z" stroke="currentColor" stroke-width="1.2" fill="none"/>
+          <circle cx="60" cy="12" r="2" fill="currentColor"/>
+        </svg>
+        <h2 class="section-title">የዕለቱ ዝግጅት</h2>
+      </div>
+
+      <ol class="timeline" id="timelineList">
+        <!-- Timeline items are rendered by script.js -->
+      </ol>
+    </section>
+
+    <!-- ═══════════════ 7. MEZMUR ACCORDION ═══════════════ -->
+    <section id="mezmur" class="mezmur-section">
+      <div class="section-head reveal">
+        <h2 class="section-title section-title-large">መዝሙር</h2>
+        <p class="section-sub reveal">በሰርጋችን ቀን የሚባሉ መዝሙሮች</p>
+      </div>
+
+      <div class="mezmur-accordion reveal">
+        <button id="mezmurToggle" class="mezmur-toggle" type="button" aria-expanded="false" aria-controls="mezmurPanel">
+          <span class="mezmur-toggle-icon" aria-hidden="true">♪</span>
+          መዝሙር ዝርዝሮች
+          <span class="mezmur-chevron" aria-hidden="true"></span>
+        </button>
+
+        <div id="mezmurPanel" class="mezmur-panel" role="region" aria-labelledby="mezmurToggle" hidden>
+          <ul id="mezmurSongs" class="mezmur-list">
+            <!-- Songs are rendered by script.js from the mezmurList array -->
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ 9. GUEST WISHES ═══════════════ -->
+    <section id="wishes" class="wishes-section">
+      <div class="section-head reveal">
+        <svg viewBox="0 0 120 24" class="ornament-svg" aria-hidden="true">
+          <path d="M2 12 H44 M76 12 H118" stroke="currentColor" stroke-width="1" fill="none"/>
+          <path d="M60 3 L66 12 L60 21 L54 12 Z" stroke="currentColor" stroke-width="1.2" fill="none"/>
+          <circle cx="60" cy="12" r="2" fill="currentColor"/>
+        </svg>
+        <h2 class="section-title">የእንግዶች መልካም ምኞት</h2>
+        <p class="section-sub">ለሙሽራውና ለሙሽራይቱ መልካም ምኞትዎን ያጋሩ</p>
+      </div>
+
+      <form id="wishForm" class="wish-form reveal" novalidate>
+        <div class="field">
+          <label for="wishName">ስም</label>
+          <input type="text" id="wishName" name="name" placeholder="ስምዎን ያስገቡ" maxlength="60" autocomplete="name" required />
+        </div>
+        <div class="field">
+          <label for="wishMessage">መልእክት</label>
+          <textarea id="wishMessage" name="message" placeholder="መልካም ምኞትዎን ይጻፉ..." rows="4" maxlength="500" required></textarea>
+        </div>
+        <p id="wishError" class="wish-error" role="alert" hidden></p>
+        <button type="submit" class="wish-submit">መልካም ምኞት ላክ</button>
+      </form>
+
+      <div id="wishesList" class="wishes-list" aria-live="polite">
+        <!-- Wishes are rendered by script.js -->
+      </div>
+    </section>
+
+    <!-- ═══════════════ 18. FOOTER ═══════════════ -->
+    <footer class="site-footer">
+      <p class="footer-blessing reveal">በፍቅር እና በበረከት</p>
+      <p class="footer-names reveal">ዲ/ን እንድሪያስ <span aria-hidden="true">&amp;</span> ፌቨን</p>
+      <p class="footer-date reveal">መስከረም 24 • 2019 ዓ.ም</p>
+
+      <div class="footer-divider reveal" aria-hidden="true">
+        <span class="divider-line"></span>
+        <svg viewBox="0 0 24 24" class="divider-cross">
+          <path d="M12 3 v18 M6 9 h12" stroke="currentColor" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+          <circle cx="12" cy="9" r="1.4" fill="currentColor"/>
+        </svg>
+        <span class="divider-line"></span>
+      </div>
+
+      <p class="footer-closing reveal">እንኳን ደስ አላችሁ!</p>
+
+      <p class="footer-credit">
+        Designed by <span class="credit-brand">eternal_invites</span> · 2026 ·
+        <a href="tel:+251941187172" class="credit-phone">0941187172</a>
+      </p>
+    </footer>
+  </main>
+
+  <!-- ═══════════════ 8/11. FLOATING MUSIC PLAYER ═══════════════ -->
+  <div id="musicWrap" class="music-wrap" hidden>
+    <div id="musicVolume" class="music-volume">
+      <input id="volumeSlider" type="range" min="0" max="100" value="70" aria-label="የድምጽ መጠን" />
+    </div>
+    <button id="musicToggle" class="music-toggle" type="button" aria-label="ሙዚቃ አጫውት ወይም አቁም" aria-pressed="false">
+      <svg class="music-icon" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M9 18 V5 l10 -2 v13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+        <circle cx="6.8" cy="18" r="2.4" fill="none" stroke="currentColor" stroke-width="1.6"/>
+        <circle cx="16.8" cy="16" r="2.4" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      </svg>
+    </button>
+    <div id="ytPlayer" class="yt-hidden" aria-hidden="true"></div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
