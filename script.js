@@ -7,8 +7,8 @@
    Replace these two URLs when ready. Leave "" to hide the
    related control safely (no broken links are ever shown).   */
 
-const YOUTUBE_URL = "https://youtu.be/0geCM_Dh_-s";
-const GOOGLE_MAPS_URL = "https://maps.app.goo.gl/65zKueXBzEtqiGQz7";
+const YOUTUBE_URL = "https://youtu.be/0geCM_Dh_-s?si=Q7ie3KvVcQs4Thka";
+const GOOGLE_MAPS_URL = "https://maps.app.goo.gl/VWYL7AuNEPUri8QXA?g_st=ic";
 
 /* Countdown target — መስከረም 24 ፣ 2019 ዓ.ም · 11:30 Ethiopian local time
    (= October 14, 2026 · 17:30 East Africa Time / 14:30 UTC).
