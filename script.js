@@ -11,7 +11,7 @@ const YOUTUBE_URL = "https://youtu.be/0geCM_Dh_-s";
 const GOOGLE_MAPS_URL = "https://maps.app.goo.gl/65zKueXBzEtqiGQz7";
 
 /* Countdown target — መስከረም 24 ፣ 2019 ዓ.ም · 11:30 Ethiopian local time
-   (= October 4, 2026 · 17:30 East Africa Time / 14:30 UTC).
+   (= October 14, 2026 · 17:30 East Africa Time / 14:30 UTC).
    Anchored in UTC so the countdown is correct from any timezone. */
 const WEDDING_TIMESTAMP = Date.UTC(2026, 9, 4, 14, 30, 0);
 
